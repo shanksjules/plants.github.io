@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&display=swap');
+
+       
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Roboto Slab', serif;
+        }
+         /* ##########  Header ###########################*/
+        .header{
+            background:url(image/bg.jpg);
+            height:70vh;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            position:relative;
+
+        }
+
+         /* ##########  Navbar style ###########################*/
+
+        .container{
+            /* border:2px solid green; */
+            width:90%;
+            margin:auto;
+            
+           
+        }
+
+        .navbar{
+            overflow:hidden;
+        }
+
+        .navbar .logo{
+            /* border:2px solid black; */
+            float:left;
+            color:white;
+            margin-top:20px; 
+            font-size:35px;
+            font-weight:600;
+        }
+
+        .navbar .nav-items{
+            /* border:2px solid black; */
+            float:right;
+            margin-top:20px; 
+            
+            
+        }
+
+        .navbar .nav-item{
+            display:inline-block;
+            margin-left:20px;
+            list-style:none;
+            
+        }
+
+        .navbar .nav-item a{
+            color:white;
+            list-style:none;
+            font-weight:600;
+            font-size:18px;
+            text-decoration:none; 
+            padding:5px 3px;
+            text-transform: uppercase;  
+        }
+
+        .navbar .nav-item a:hover{
+            border-bottom:2px solid white;
+        } 
+        
+        /* ********************header content styling */
+    .header-content{
+        height:50%;
+        width: 35%;
+        background:rgba(0, 0, 0, 0.37);
+        /* border:2px solid seagreen; */
+        position:absolute;
+        top:70%;
+        left:50%;
+        color:white;
+        transform:translate(-50%,-50%);
+        /* in x axis & y axis */
+        text-align:center;
+        padding:20px;
+        
+        
+    }
+    .header-content h1{
+        color:rgb(88, 5, 78);
+        text-transform:uppercase;
+        font-weight:700;
+        margin-bottom:50px;
+        font-size:60px;
+        text-shadow:2px 2px 10px rgb(243, 243, 243);
+}
+        
+    
+    .header-content a{
+        background:blue;
+        
+        text-decoration: none;
+        color: white;
+        font-size:18px;
+        border:3px solid rgb(33, 7, 112);
+        padding:10px 25px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        font-weight:400;
+    }
+
+    /* ********************header content styling */
+    .main{
+        background-color:rgb(14, 2, 52);
+        padding:80px 0;
+    } 
+
+    .games{
+        /* background:white; */
+        
+        
+    }
+
+    .row{
+    height:300px;
+    overflow: hidden;
+
+    background:#cfe5ed;
+    
+    box-shadow:5px 5px 20px 0px  #000;
+    box-shadow:0px 0px 20px 0px  #aaa;
+
+    }
+.row h2{
+    padding:10px 0;
+}
+
+.row p{
+    padding:15px 0;
+    font-size:16px; 
+}
+
+.row1, .row2{
+    margin-bottom:100px;
+}
+
+.row1 .img-box, .row2 .text-box{
+    float:left;
+    width:50%;
+    color:rgb(14, 2, 52);
+}
+
+.row2 .img-box, .row1 .text-box{
+    float:right;
+    width: 50%;
+    color:rgb(14, 2, 52);
+} 
+
+.row .img-box{
+    
+    height:100%
+}
+
+.row .text-box{
+    
+    padding:30px;
+}
+/* change imag to inline block so i can give marging padding to it incase of media query */
+.row .img-box img{
+    display:inline-block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    /* object fit cover maintains the aspect raito of image */
+}
+
+.row .btn{
+    display:inline-block;
+    padding:10px 20px;
+    font-weight:500;
+    text-transform:uppercase;
+    margin:30px 0;
+    border:2px solid rgb(14, 2, 52);
+    border-radius:25px;
+    color:rgb(14, 2, 52);
+    
+    text-decoration:none;
+    /* padding in em as it should 
+    be respective to font-size of buuton */
+}
+
+
+
+.btn:hover{
+    background:rgb(14, 2, 52);
+    color:#cfe5ed;
+    
+}
+
+/* ################Footer ############# */
+.footer{
+    background:#cfe5ed;
+    color:rgb(14, 2, 52);
+    padding:2rem;
+    text-align:center;
+    font-size:16px;
+    font-weight:600;
+}
+
+.social-media-links a{
+    /* margin:2rem; */
+    color:white;
+    margin:2rem;
+    
+    
+}
+
+
+
+    </style>
+
+</head>
+
+<!-- ******************************Body******************************** -->
+<body>
+
+    <!-- *******************************Header ****************************  -->
+    <header class="header">
+        <nav class="navbar container">
+            
+            <h1 class="logo">AG</h1>
+            <ul class="nav-items">
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-content">
+            <!--  i can use h1 or h2 -->
+            <h1>
+                Gaming
+            </h1>
+            
+            <a href="#play-games">Play</a>
+        </div>
+
+    </header>
+
+
+    <main class="main">
+        <section class="games container" id = "play-games">
+            
+                <div class="row row1">
+                    <div class="img-box">
+                      <img src="image/mario.png" alt = "Mario"> 
+                    </div>
+                    <div class="text-box">
+                        <h2>Mario's Adventure</h2>
+                        <p>
+                            Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games
+                        </p>
+                        <a href ="#" class="btn">Play Game</a>
+                    </div>
+                </div>
+                <div class="row row2">
+                    <div class="img-box">
+                      <img src="image/flappy_bird.png" alt = "Mario"> 
+                    </div>
+                    <div class="text-box">
+                        <h2>Flappy Bird</h2>
+                        <p>
+                            Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games
+                        </p>
+                        <a href ="#" class="btn">Play Game</a>
+                    </div>
+                </div>
+
+                <div class="row row1">
+                    <div class="img-box">
+                      <img src="image/shoot_aliens.png" alt = "Mario"> 
+                    </div>
+                    <div class="text-box">
+                        <h2>Shoot the Aliens</h2>
+                        <p>
+                            Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games
+                        </p>
+                        <a href ="#" class="btn">Play Game</a>
+                    </div>
+                </div>
+
+                <div class="row row2">
+                    <div class="img-box">
+                      <img src="image/star_wars.png" alt = "Mario"> 
+                    </div>
+                    <div class="text-box">
+                        <h2>Star Wars</h2>
+                        <p>
+                            Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games
+                        </p>
+                        <a href ="https://studio.code.org/c/1162605170" class="btn">Play Game</a>
+                    </div>
+                </div>
+
+                <div class="row row1">
+                    <div class="img-box">
+                      <img src="image/soccer_stars.png" alt = "Mario"> 
+                    </div>
+                    <div class="text-box">
+                        <h2>Soccer Stars</h2>
+                        <p>
+                            Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games. Game description , Rules of Games
+                        </p>
+                        <a href ="https://tinyurl.com/Soccer-Stars-124" class="btn">Play Game</a>
+                    </div>
+                </div>
+                
+            
+    
+        </section>
+    
+    </main>
+<!-- #######################footer ########################################## -->
+    <footer class="footer">
+        <div class = "social-media-links">
+            <a href="#" class="fa fa-facebook"></a>  
+            <a href="#" class="fa fa-twitter"></a>  
+            
+            <a href="#" class="fa fa-instagram"></a> 
+
+        </div>
+        <p>
+            Gaming Website &copy; 2023, All Rights Reserved
+        </p>
+    </footer>
+
+
+</body>
+</html>
